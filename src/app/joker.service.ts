@@ -20,7 +20,7 @@ export class JokerService {
     }
 
     getSuggestions(query:string, callback:Function) {
-        let url = "http://suggestqueries.google.com/complete/search";
+        let url = "//suggestqueries.google.com/complete/search";
         let queryString =
             `?q=${query}&client=youtube&format=json&hl=en&callback=JSONP_CALLBACK`;
         return this.jsonp

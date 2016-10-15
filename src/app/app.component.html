@@ -2,12 +2,12 @@
 <div>
     <input [(ngModel)]="query"/>
     <button (click)="makeJoke()">Make Joke</button>
-    <tr *ngFor="let joke of jokes">
-        {{ joke }}
-    </tr>
+    <div *ngFor="let joke of jokes">
+        <button (click)="acceptJoke(joke)">It's a joke</button> {{ joke }}
+    </div>
 </div>
 <span style="width:49%; display:inline-block;">
-    <h1>fresh</h1>
+    <h1>Fresh</h1>
     <table>
         <tr>
             <th></th>
@@ -17,13 +17,14 @@
         <tr *ngFor="let joke of freshList">
             <td>{{ joke.votes }}</td>
             <td><button (click)="upvote('fresh', joke)">Upvote</button></td>
+            <td><button (click)="remove('fresh', joke)">Kill</button></td>
             <td>{{ joke.actualJoke }}<br>{{ joke.timeAdded * 1000 | amTimeAgo }}</td>
         </tr>
     </table>
 
 </span>
 <span style="width:49%;display:inline-block;">
-    <h1>hot</h1>
+    <h1>Popular</h1>
     <table>
         <tr>
             <th></th>
@@ -33,6 +34,7 @@
         <tr *ngFor="let joke of hotList">
             <td>{{ joke.votes }}</td>
             <td><button (click)="upvote('hot', joke)">Upvote</button></td>
+            <td><button (click)="remove('fresh', joke)">Kill</button></td>
             <td>{{ joke.actualJoke }}<br>{{ joke.timeAdded * 1000 | amTimeAgo }}</td>
         </tr>
     </table>
