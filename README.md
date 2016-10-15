@@ -20,6 +20,7 @@ npm install
 npm install angularfire2 firebase --save
 #https://github.com/angular/angularfire2/blob/master/docs/1-install-and-setup.md#troubleshooting
 npm install --save angular2-moment
+ng g service Joker
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

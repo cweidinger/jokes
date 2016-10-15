@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {HttpModule, JsonpModule} from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 import {MomentModule} from "angular2-moment";
+import {JokerService} from "./joker.service";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyD5OpVX1BgRK69ok6SQqHXH3nfJ5L9gvr8",
@@ -25,9 +26,12 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     FormsModule,
     HttpModule,
+      JsonpModule,
     MomentModule
   ],
-  providers: [],
+  providers: [
+    JokerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
