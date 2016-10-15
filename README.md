@@ -1,6 +1,25 @@
 # Jokes
 
+See the demo at https://cweidinger.github.io/jokes/
+
+## Frequently used documentation
+https://github.com/angular/angular-cli
+https://github.com/angular/angularfire2
+https://github.com/urish/angular2-moment
+
+## commands I used to get it started
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15.
+
+npm install -g angular-cli  # or install locally $ npm install angular-cli --save-dev
+npm install -g typings 
+npm install -g typescript
+ng new project
+cd project
+npm install
+npm install angularfire2 firebase --save
+#https://github.com/angular/angularfire2/blob/master/docs/1-install-and-setup.md#troubleshooting
+npm install --save angular2-moment
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
